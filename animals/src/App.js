@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import AnimalShow from "./AnimalShow";
+import IncrementDecrement from "./IncrementDecrement";
+
+function getRandomAnimal() {
+  const animals = ["bird", "cat", "cow", "dog", "gator", "horse"];
+  return animals[Math.floor(Math.random() * animals.length)];
+}
 
 function App() {
+  const [animals, setAnimals] = useState([]);
+  const handleClick = (e) => {
+    console.log("Add Animal Button is clicked!!!", e);
+    setAnimals([...animals, getRandomAnimal()]);
+  };
+
+  const renderedAnimals = animals.map((animal, index) => {
+    return <AnimalShow type={animal} key={index} />;
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <h3>Increment, Decrement & Clear Numbers</h3>
+        <IncrementDecrement />
+      </div>
+      <hr />
+      <div>
+        <h3>Increment, Decrement & Clear Arrays</h3>
+        <button onClick={handleClick}>Add Animal</button>
+        {renderedAnimals}
+      </div>
     </div>
   );
 }
