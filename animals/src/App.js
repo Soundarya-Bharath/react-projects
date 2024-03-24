@@ -1,3 +1,4 @@
+import "./App.css";
 import { useState } from "react";
 import AnimalShow from "./AnimalShow";
 import IncrementDecrement from "./IncrementDecrement";
@@ -20,15 +21,15 @@ function App() {
 
   return (
     <div>
-      <div>
+      <div className="app">
         <h3>Increment, Decrement & Clear Numbers</h3>
         <IncrementDecrement />
       </div>
       <hr />
-      <div>
+      <div className="app">
         <h3>Increment, Decrement & Clear Arrays</h3>
         <button onClick={handleClick}>Add Animal</button>
-        {renderedAnimals}
+        <div className="animal-list"> {renderedAnimals} </div>
       </div>
     </div>
   );

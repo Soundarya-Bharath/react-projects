@@ -1,3 +1,4 @@
+import "./App.css";
 import { useState } from "react";
 
 function IncrementDecrement() {
@@ -17,9 +18,21 @@ function IncrementDecrement() {
   return (
     <div>
       <button onClick={handleIncrementClick}>Increment</button>
-      <button onClick={handleDecrementClick}>Decrement</button>
+      <button className="button-space" onClick={handleDecrementClick}>
+        Decrement
+      </button>
       <button onClick={handleClearClick}>Clear</button>
-      <div>Count: {count}</div>
+      <div
+        style={{
+          fontWeight: "bold",
+          textAlign: "center",
+          fontSize: "25px",
+          padding: "15px",
+          color: "darkred",
+        }}
+      >
+        Count: {count}
+      </div>
     </div>
   );
 }
