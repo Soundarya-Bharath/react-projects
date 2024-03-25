@@ -1,15 +1,11 @@
+import "./SearchBar.css";
 import { useState } from "react";
 
 function SearchBar({ onSubmit }) {
-  // const handleClick = () => {
-  //   onSubmit("Cars");
-  // };
-
   const [term, setTerm] = useState("");
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
     onSubmit(term);
   };
   const handleInputChange = (e) => {
@@ -17,10 +13,16 @@ function SearchBar({ onSubmit }) {
   };
   return (
     <div>
-      <form onSubmit={handleFormSubmit}>
-        <input value={term} onChange={handleInputChange} />
-      </form>
-      {/* <button onClick={handleClick}>Search</button> */}
+      <h3 className="heading">Image Search App</h3>
+      <div className="search-bar">
+        <form onSubmit={handleFormSubmit}>
+          <label>Enter Search Term</label>
+          <input value={term} onChange={handleInputChange} />
+          <button value={term} onClick={handleInputChange}>
+            Search
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
