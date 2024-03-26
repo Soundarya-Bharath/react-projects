@@ -35,5 +35,8 @@
   font-size: large;
   width: 20%;
   align-self: center;
-  color: black;
+  background-color: rgb(229, 199, 250);
+  border-color: rgb(187, 107, 243);
+  color: indigo;
+  font-weight: bold;
 }
