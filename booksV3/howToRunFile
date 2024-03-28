@@ -1,0 +1,9 @@
+<!-- To run this application, this below 2 command to be givrn at a same time to run application and API -JSON Server
+
+1. npm run start
+2. npm run server
+
+Refer Package.json file (under scripts) to know the port number for the server and db.json file included here as an api server.
+Data gets updated in db.json file.
+
+api.http is to know about working of api server by installing the extension of rest client where send request option is used to send the request and check the api server. -->
