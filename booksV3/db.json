@@ -1,16 +1,24 @@
 {
   "books": [
     {
-      "title": "Hungry Games",
+      "title": "Hunger Games By Suzanne Collins",
       "id": 1
     },
     {
-      "title": "Harry Potter",
+      "title": "Harry Potter By J. K. Rowling",
       "id": 2
     },
     {
-      "title": "Olivers Travel",
+      "title": "Olivers Twist By Charles Dickens",
       "id": 3
+    },
+    {
+      "title": "One Arranged Murder By Chetan Bhagat",
+      "id": 4
+    },
+    {
+      "title": "The Safeguard of the Sea By Nicholas Rodger",
+      "id": 5
     }
   ]
 }
