@@ -25,5 +25,5 @@ Content-Type: application/json
 ###
 
 #Delete a Book
-DELETE http://localhost:3001/books/1 HTTP/1.1
+DELETE http://localhost:3001/books/3 HTTP/1.1
 Content-Type: application/json
